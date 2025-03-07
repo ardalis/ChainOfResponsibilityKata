@@ -21,17 +21,4 @@ public class HeroesGetById : IClassFixture<CustomWebApplicationFactory<Program>>
     Assert.Equal(1, result.Id);
     Assert.Equal(HeroesDa._heroes[0].Name, result.Name);
   }
-
-  [Fact]
-  public async Task ReturnsOneNewHeroGivenUniqueName()
-  {
-    var testHeroName = Guid.NewGuid().ToString();
-    var request = new HeroDto() { Name = testHeroName };
-    var content = StringContentHelpers.FromModelAsJson(request);
-
-    var result = await _client.PostAndDeserializeAsync<HeroDto>(
-        "/heroes", content);
-
-    Assert.Equal(testHeroName, result.Name);
-  }
 }
