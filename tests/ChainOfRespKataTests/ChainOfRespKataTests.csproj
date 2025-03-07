@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Kata\ChainOfRespKataWeb.csproj" />
+    <ProjectReference Include="..\..\src\ChainOfRespKataWeb\ChainOfRespKataWeb.csproj" />
   </ItemGroup>
 
   <ItemGroup>
