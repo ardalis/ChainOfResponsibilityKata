@@ -1,0 +1,15 @@
+@hostname=https://localhost
+@port=7066
+@host={{hostname}}:{{port}}
+
+GET {{host}}/heroes/1
+
+###
+
+POST {{host}}/heroes
+Content-Type: application/json
+
+{
+  "id" : "0",
+  "name": "Superman"
+}
