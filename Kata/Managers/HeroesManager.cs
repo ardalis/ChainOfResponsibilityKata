@@ -32,6 +32,7 @@ public class HeroesManager(ILogger<HeroesManager> logger, HeroesDa heroesDa)
       throw;
     }
   }
+
   public async Task<Hero> Add(HeroDto newHero)
   {
     try
@@ -54,6 +55,11 @@ public class HeroesManager(ILogger<HeroesManager> logger, HeroesDa heroesDa)
         return null;
       }
       return hero;
+    }
+    catch (DuplicateKeyException ex)
+    {
+      _logger.LogWarning(ex, "Duplicate name provided.");
+      throw;
     }
     catch (Exception ex)
     {
