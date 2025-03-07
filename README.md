@@ -1,2 +1,15 @@
-# ChainOfResponsibilityKata
-A starting point for the CORK - Chain of Responsibility Kata
+# Chain Of Responsibility Kata (CORK)
+
+A starting point for the CORK - Chain of Responsibility Kata.
+
+## Background
+
+Many ASP.NET applications tend to have a lot of duplicate cross-cutting concern code in every endpoint, action, or "business" method. In most cases, the cross-cutting concerns of validation, error handling, and more can be refactored into fewer less repetitive modules using patterns like decorator or even better, Chain of Responsibility. This kata is designed to teach developers how to refactor legacy code into a better design by practicing applying the Chain of Responsibility pattern to a couple of simple API endpoints.
+
+MediatR and similar libraries can be used to standardize the interface of commands and queries in systems so that instead of having to create separate custom decorators for every business service class, a small set of *behaviors* (aka middleware) can be used and applied to nearly every request or operation.
+
+## Instructions
+
+1. Review the application and its two main endpoints for GetById and Create in the XXXController and associated XXXManager classes.
+2. Look for cross-cutting concerns like validation and error handling.
+3. 
