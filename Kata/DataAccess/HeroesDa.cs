@@ -4,7 +4,7 @@ namespace Kata.DataAccess;
 
 public class HeroesDa
 {
-  private static List<Hero> _heroes = new() { new Hero { Id = 1, Name = "Iron Man" } };
+  public static List<Hero> _heroes = new() { new Hero { Id = 1, Name = "Iron Man" } };
   public Task<Hero?> GetById(int id)
   {
     return Task.FromResult(_heroes.FirstOrDefault(x => x.Id == id));

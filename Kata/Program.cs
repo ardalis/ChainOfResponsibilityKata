@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using Kata.ApiModels;
 using Kata.DataAccess;
 using Kata.Managers;
@@ -41,3 +41,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }

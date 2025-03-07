@@ -23,7 +23,6 @@ public class HeroesController(ILogger<HeroesController> logger,
     var hero = await _heroesManager.GetById(id);
 
     return Ok(new HeroDto { Id = hero.Id, Name = hero.Name });
-
   }
 
   [HttpPost()]
